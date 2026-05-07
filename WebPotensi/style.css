@@ -1,0 +1,823 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.apayah {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url(Wind\ exporeslight.jpg) no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.btn-primary {
+    background: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #f0f0f0;
+}
+
+/* About Section */
+.about {
+    padding: 80px 20px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.stat-item h3 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.stat-item p {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.partners {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.5;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-top: 1px solid #eee;
+    padding-top: 40px;
+}
+
+/* Catalog Section */
+.catalog {
+    padding-bottom: 80px;
+}
+
+.catalog h2 {
+    font-size: 2rem;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+}
+
+.card p {
+    color: #777;
+    font-size: 0.85rem;
+}
+
+/* Process Section */
+.process {
+    padding: 80px 20px;
+    background: #fcfcfc;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.process-img {
+    position: relative;
+}
+
+.process-img img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.floating-badge {
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    background: #8fbcd4;
+    color: white;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.step {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.step-icon {
+    background: #eee;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.step h4 {
+    margin-bottom: 5px;
+}
+
+.step p {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Responsive (Mobile Tweak) */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .apayah { display: block; }
+    
+    .hero h1 { font-size: 2.5rem; }
+    
+    .about-grid, .card-grid, .process-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .floating-badge {
+        width: 100px;
+        height: 100px;
+        right: 10px;
+    }
+    
+    .partners {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    /* Styling tambahan untuk menu aktif di mobile */
+@media (max-width: 768px) {
+    /* Sembunyikan menu secara default di mobile */
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Sesuaikan dengan tinggi navbar */
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        z-index: 1000;
+        gap: 20px;
+    }
+
+    /* Tampilkan menu saat class 'active' ditambahkan oleh JS */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+}
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Tambahan: Agar saat scrolling, judul section tidak tertutup navbar */
+section {
+    scroll-margin-top: 80px; 
+}
+
+/* Catalog Layout */
+.catalog {
+    padding: 100px 20px;
+}
+
+.catalog-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr; /* Kolom kiri untuk judul, kanan untuk kartu */
+    gap: 40px;
+}
+
+.catalog-header h2 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.catalog-header p {
+    color: #888;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Card Track */
+.card-track {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 380px; /* Membuat gambar lebih tinggi/vertikal */
+    overflow: hidden;
+    border-radius: 24px; /* Sudut melengkung halus sesuai gambar */
+    margin-bottom: 15px;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.card p {
+    color: #999;
+    font-size: 0.85rem;
+}
+
+/* Navigasi Bulat */
+.catalog-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.nav-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.nav-btn.next {
+    background: #222; /* Tombol next berwarna gelap seperti di gambar */
+    color: white;
+    border-color: #222;
+}
+
+.nav-btn:hover {
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .catalog-layout {
+        grid-template-columns: 1fr; /* Tumpuk ke bawah di tablet/HP */
+    }
+    
+    .catalog-header {
+        text-align: left;
+    }
+
+    .card-track {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    .card-track {
+        grid-template-columns: 1fr; /* 1 kolom di HP */
+    }
+    
+    .img-wrapper {
+        height: 300px;
+    }
+}
+
+/* Why Choose Us Section */
+.why-us {
+    padding: 100px 20px;
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Sisi kiri sedikit lebih kecil dari kanan */
+    gap: 60px;
+    align-items: center;
+}
+
+/* Sisi Kiri: Info */
+.why-us-info .badge-light {
+    background: #f0f0f0;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.why-us-info h2 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.why-us-info p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+
+.btn-outline {
+    padding: 12px 25px;
+    border: 2px solid #222;
+    background: transparent;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: #222;
+    color: white;
+}
+
+/* Sisi Kanan: Kartu Statistik */
+.stats-cards-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Grid 2x2 */
+    gap: 20px;
+}
+
+.stat-card-box {
+    background: #f8f8f8; /* Warna abu muda seperti di gambar */
+    padding: 40px 30px;
+    border-radius: 24px;
+    transition: transform 0.3s ease;
+}
+
+.stat-card-box:hover {
+    transform: translateY(-5px);
+    background: #f0f0f0;
+}
+
+.stat-card-box h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.stat-card-box h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.stat-card-box p {
+    font-size: 0.85rem;
+    color: #777;
+    line-height: 1.5;
+}
+
+/* Responsive Mobile */
+@media (max-width: 992px) {
+    .why-us-grid {
+        grid-template-columns: 1fr; /* Tumpuk ke bawah */
+        gap: 40px;
+    }
+
+    .why-us-info h2 {
+        font-size: 2.2rem;
+    }
+
+    .stats-cards-wrapper {
+        grid-template-columns: 1fr 1fr; /* Tetap 2 kolom di tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    .stats-cards-wrapper {
+        grid-template-columns: 1fr; /* 1 kolom di HP */
+    }
+    
+    .stat-card-box {
+        padding: 30px;
+    }
+}
+
+/* Research Section */
+.research {
+    padding: 80px 20px;
+}
+
+/* Ubah display: block menjadi flex agar lebih mudah dikontrol, 
+   atau biarkan block tapi pastikan lebarnya 100% 
+*/
+.research-grid {
+    display: block; 
+    width: 100%;
+}
+
+.research-list {
+    width: 100%; /* Memastikan list mengambil seluruh ruang */
+}
+
+.research-item {
+    background: #f2f2f2; 
+    border-radius: 30px;
+    padding: 40px;
+    margin-bottom: 20px;
+    display: flex; /* Menggunakan flex agar angka dan teks berdampingan rapi */
+    gap: 40px;
+    align-items: flex-start;
+    width: 100%; /* Ini kunci agar selalu full lebar */
+    box-sizing: border-box; /* Agar padding tidak merusak lebar */
+}
+
+.number {
+    font-size: 6rem;
+    font-weight: 700;
+    color: #2b50ed;
+    line-height: 1;
+    font-family: serif; 
+    min-width: 80px; /* Memberi ruang tetap untuk angka */
+}
+
+.item-content {
+    flex: 1; /* Menginstruksikan teks untuk mengambil sisa ruang yang ada */
+}
+
+.item-content h3 {
+    font-size: 1.8rem; /* Sedikit diperbesar agar proporsional di layar lebar */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.item-details p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsif untuk layar HP agar angka tidak terlalu besar */
+@media (max-width: 768px) {
+    .research-item {
+        flex-direction: column; /* Angka pindah ke atas teks di HP */
+        gap: 10px;
+        padding: 30px;
+    }
+    
+    .number {
+        font-size: 4rem;
+    }
+}
+
+/* Performance Section Styles */
+.performance {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.perf-header {
+    margin-bottom: 40px;
+}
+
+.perf-header h2 {
+     font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.perf-header p {
+    font-size: 0.9rem;
+    color: #666;
+    max-width: 500px;
+    line-height: 1.5;
+}
+
+.perf-main-image {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.perf-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+/* Grid Bawah untuk Deskripsi */
+.perf-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.perf-item {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.perf-number {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.perf-item hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.perf-item p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .perf-main-image {
+        height: 400px;
+    }
+    .perf-stats-grid {
+        grid-template-columns: 1fr; /* Tumpuk ke bawah di mobile */
+        gap: 30px;
+    }
+    .perf-header h2 {
+        font-size: 2.2rem;
+    }
+}
+
+.divider-title-container {
+    width: 100%;
+    text-align: center;
+    padding: 60px 0 20px; /* Jarak atas dan bawah */
+}
+
+.centered-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px; /* Jarak antara teks dan garis */
+    color: #222;
+}
+
+.thin-line {
+    width: 80%; /* Atur panjang garis (misal 80% dari lebar layar) */
+    max-width: 1200px; /* Batas maksimal lebar garis */
+    height: 1px; /* Ketipisan garis */
+
+    margin: 0 auto; /* Memastikan garis berada di tengah */
+}
+
+.db-grid-section {
+    padding: 80px 20px;
+  
+}
+
+.db-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membuat 3 grid ke samping */
+    gap: 25px; /* Jarak antar kartu tabel */
+    align-items: start;
+}
+
+.db-table-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.table-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.table-header .icon {
+    font-size: 1.2rem;
+}
+
+.table-header h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    color: #1a1a1a;
+}
+
+.table-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 0.85rem;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-row span:first-child {
+    font-weight: 500;
+    color: #333;
+}
+
+.table-row .type {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+/* Hover effect */
+.db-table-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive untuk Tablet dan Mobile */
+@media (max-width: 1024px) {
+    .db-grid-wrapper {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .db-grid-wrapper {
+        grid-template-columns: 1fr; /* 1 kolom di HP */
+    }
+}
+
+.iframe-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.iframe-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.iframe-header h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.iframe-wrapper {
+    position: relative;
+    width: 100%;
+    /* Mengatur rasio tinggi iframe (misal 16:9) atau gunakan pixel tetap */
+    height: 600px; 
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Menghilangkan border default iframe yang kaku */
+    background: #f9f9f9;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .iframe-wrapper {
+        height: 450px;
+    }
+}

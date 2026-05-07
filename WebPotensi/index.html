@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Souraarts | UML</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Pandjie | 253303611206</div>
+            <ul class="nav-links">
+                <li><a href="#potensi">Potensi</a></li>
+                <li><a href="#analisis">Analisis</a></li>
+                <li><a href="#konsep">Konsep & Arsitektur</a></li>
+                <li><a href="#IntiUML">Pemodelan UML</a></li>
+                <li><a href="#implementasi">Implementasi Website</a></li>
+            </ul>
+            <div class="apayah">☰</div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>SourArts<br>Gallery</h1>
+                <p>Sourarts adalah platform berbasis web untuk interaksi jual dan beli jasa gambar antara Artist dan Pelanggan.</p>
+                <button class="btn-primary">Go To Website</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="potensi" class="about container">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2>Identifikasi Potensi Lokal</h2>
+                <p>Banyak seniman lokal memiliki karya berkualitas namun terjebak dalam metode transaksi manual di media sosial yang rentan penipuan dan pencurian karya (screenshot/save image tanpa izin). Website ini hadir sebagai jembatan profesional yang mengotomatisasi transaksi dan melindungi hak cipta.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item"><h3>2+</h3><p>Seniman</p></div>
+                <div class="stat-item"><h3>48+</h3><p>Selling</p></div>
+                <div class="stat-item"><h3>22+</h3><p>Album</p></div>
+                <div class="stat-item"><h3>98%</h3><p>Klien Puas</p></div>
+            </div>
+        </div>
+        <div class="stat-item"><h3></h3><p>Dari sudut pandang Teknik Informatika, fokus utama website ini bukan sekadar menampilkan gambar, melainkan pada keamanan aset digital dan otomasi alur kerja. Dengan platform ini, potensi seni lokal tidak lagi hanya menjadi konsumsi tetangga, melainkan menjadi komoditas ekonomi digital yang terlindungi dan profesional.</p></div>
+        <!-- <div class="partners">
+            <span>LogoIpsum</span><span>LogoIpsum</span><span>LogoIpsum</span><span>LogoIpsum</span>
+        </div> -->
+    </section>
+
+    <section id="analisis" class="catalog container">
+        <!-- <h2>Analisis</h2> -->
+        <!-- <p class="subtitle">Analisis Kebutuhan Sistem</p> -->
+        <!-- <div class="card-grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=400" alt="Kantor">
+                <h3>Ruang Kantor</h3>
+                <p>4000+ Objek</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=400" alt="Gudang">
+                <h3>Ruang Gudang</h3>
+                <p>1000+ Objek</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=400" alt="Tanah">
+                <h3>Lahan Tanah</h3>
+                <p>2000+ Objek</p>
+            </div>
+        </div> -->
+
+          <div class="process-steps">
+                <h2>Analisis Kebutuhan Sistem</h2>
+                <div class="step">
+                    <span class="step-icon">💬</span>
+                    <div>
+                        <h4>Fungsional</h4>
+                        <p>Terdapat Album untuk melihat gambar dari seniman, memiliki password hash di dalam database</p>
+                    </div>
+                </div>
+          
+                <div class="step">
+                    <span class="step-icon">🏢</span>
+                    <div>
+                        <h4>Non-Fungsional</h4>
+                        <p>Memiliki tampilan website yang responsive di berbagai layar handpone ataupun dekstop</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-icon">📄</span>
+                    <div>
+                        <h4>Role</h4>
+                        <p>Terdapat User, Artist dan Admin</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section id="konsep" class="catalog container">
+    <div class="catalog-layout">
+        <div class="catalog-header">
+            <h2>Konsep</h2>
+            <p>konsep ini adalah platform galeri digital yang mengotomatisasi jual-beli karya seni lokal secara aman</p><br>
+
+                <div class="catalog-header">
+            <h2>Arsitekur</h2>
+            <p>sistem bekerja dengan memisahkan file gambar menjadi dua jenis: gambar preview rendah resolusi dengan watermark untuk publik, dan file asli berkualitas tinggi yang disimpan di server tertutup. Transaksi diproses melalui gerbang pembayaran otomatis, di mana pembeli hanya akan mendapatkan akses unduh file asli via tautan khusus setelah pembayaran terverifikasi, sementara Admin bertugas memoderasi konten dan mengelola perputaran dana antara pembeli dan seniman.</p>
+        </div>
+        </div>
+
+        <div class="catalog-content">
+            <div class="card-track">
+                <div class="card">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=400" alt="Kantor">
+                    </div>
+                    <h3>Gambar 1</h3>
+                    <p>4000+ Deskripsi</p>
+                </div>
+                <div class="card">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=400" alt="Gudang">
+                    </div>
+                    <h3>Gambar 2</h3>
+                    <p>1000+ Deskripsi</p>
+                </div>
+                <div class="card">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=400" alt="Tanah">
+                    </div>
+                    <h3>Gambar 3</h3>
+                    <p>2000+ Deskripsi</p>
+                </div>
+            </div>
+
+            <!-- <div class="catalog-nav">
+                <button class="nav-btn prev"><span>&#10094;</span></button>
+                <button class="nav-btn next"><span>&#10095;</span></button>
+            </div> -->
+        </div>
+    </div>
+</section>
+    <section id="IntiUML">
+        <div class="divider-title-container">
+    <h2 class="centered-title">
+Unified Modeling Language  (UML)</h2>
+    <div class="thin-line"></div>
+</div>
+</section>
+
+    <section id="pemodelan" class="why-us container">
+    <div class="why-us-grid">
+            
+        <div class="why-us-info">
+            <!-- <span class="badge-light">Kenapa memilih kami?</span> -->
+            <h2>Identifikasi Setiap Use Case</h2>
+            <p>Fungsi-Fungsi yang di sediakan sistem dari setiap masing-masing aktor</p>
+        </div>
+
+        <div class="stats-cards-wrapper">
+            <div class="stat-card-box">
+                <h3>Aktor</h3>
+                <h4>User</h4>
+                <p>Daftar Akun, Login, Logout, Lihat Album, Buat Pesanan, Bayar Pesanan, Beri Ulasan</p>
+            </div>
+            <div class="stat-card-box">
+                <h3>Artist</h3>
+                <h4>Seniman</h4>
+                <p>Login, Konfirmasi Pesanan, Lihat Laporan, Kelola Galeri, Terima Pesanan</p>
+            </div>
+            <div class="stat-card-box">
+                <h3>Admin</h3>
+                <h4>Moderator</h4>
+                <p>Kelola Pengguna, Pantau Transaksi, Tangani Komplain</p>
+            </div>
+            <div class="stat-card-box">
+                <h3>Sistem</h3>
+                <h4>Pembayaran</h4>
+                <p>Proses Pembayaran, Kirim Konfirmasi, Verifikasi Saldo</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+        
+        <section id="research" class="research container">
+               <div class="why-us-info">
+            <h2>Activity</h2>
+            <p>Hubungan Aktor & Use Case
+Koneksi dan relasi antar elemen dalam sistem</p>
+        </div>
+    <div class="research-grid">
+
+        <div class="research-list">
+            
+            <div class="research-item">
+                <div class="number">1</div>
+                <div class="item-content">
+                    <h3>INCLUDE</h3>
+                    <div class="item-details">
+                        <p>Association adalah hubungan langsung antara aktor dengan use case. Artinya, aktor berinteraksi langsung dengan sistem.
+<br><br>
+Pelanggan —— Login<br>
+Pelanggan —— Buat Pesanan<br>
+Artist —— Terima Pesanan</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="research-item">
+                <div class="number">2</div>
+                <div class="item-content">
+                    <h3>ASSOCIATION</h3>
+                    <div class="item-details">
+                        <p>Include adalah hubungan dimana suatu proses selalu melibatkan proses lain. Jadi, use case utama tidak bisa berjalan tanpa proses ini.<br><br>
+
+Buat Pesanan : include Progress Pesanan<br>
+Bayar Pesanan  :
+include Proses Pembayaran</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="research-item">
+                <div class="number">3</div>
+                <div class="item-content">
+                    <h3>EXTEND</h3>
+                    <div class="item-details">
+                        <p>Extend adalah hubungan tambahan yang bersifat opsional. Use case ini hanya berjalan dalam kondisi tertentu.
+<br><br>
+Beri Ulasan<br>
+extend Progress Pesanan</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section id="performance" class="performance">
+    <div class="container">
+         <div class="why-us-info">
+            <h2>Use Case Diagram</h2>
+            <p>Hubungan Aktor & Use Case
+Koneksi dan relasi antar elemen dalam sistem</p>
+        </div>
+
+        <div class="perf-main-image">
+            <img src="DiagramFinal.jpg" id="gambar">
+        </div>
+
+        <div class="perf-stats-grid">
+            <div class="perf-item">
+                <span class="perf-number">01 Aktor</span>
+                <hr>
+                <p>Aktor Memiliki 7 Use Case dengan 3 include dan 1 extend</p>
+            </div>
+            <div class="perf-item">
+                <span class="perf-number">02 Artist</span>
+                <hr>
+                <p>Artist Memiliki 5 Use Case dengan 1 include</p>
+            </div>
+            <div class="perf-item">
+                <span class="perf-number">03 Admin</span>
+                <hr>
+                <p>Admin Memiliki 3 Use Case</p>
+            </div>
+             <div class="perf-item">
+                <span class="perf-number">04 Sistem Pembayaran</span>
+                <hr>
+                <p>Sistem Pembayaran memiliki 3 Use Case dengan 1 Include</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <section class="db-grid-section container">
+             <div class="why-us-info">
+            <h2>Class Diagram</h2>
+            <p>Hubungan Aktor & Use Case
+Koneksi dan relasi antar elemen dalam sistem</p>
+        </div>
+    <div class="db-grid-wrapper">
+        
+        <div class="db-table-card">
+            <div class="table-header">
+                <span class="icon">👤</span>
+                <h3>Tabel: user</h3>
+            </div>
+            <div class="table-body">
+                <div class="table-row"><span>id</span><span class="type">int(11)</span></div>
+                <div class="table-row"><span>username</span><span class="type">varchar(50)</span></div>
+                <div class="table-row"><span>email</span><span class="type">varchar(100)</span></div>
+                <div class="table-row"><span>password</span><span class="type">varchar(255)</span></div>
+                <div class="table-row"><span>create_at</span><span class="type">timestamp</span></div>
+                <div class="table-row"><span>role</span><span class="type">enum(user, admin)</span></div>
+            </div>
+        </div>
+
+        <div class="db-table-card">
+            <div class="table-header">
+                <span class="icon">📦</span>
+                <h3>Tabel: pesanan</h3>
+            </div>
+            <div class="table-body">
+                <div class="table-row"><span>id</span><span class="type">int(11)</span></div>
+                <div class="table-row"><span>nama_pemesan</span><span class="type">varchar(100)</span></div>
+                <div class="table-row"><span>email_kontak</span><span class="type">varchar(100)</span></div>
+                <div class="table-row"><span>detail_pesanan</span><span class="type">text</span></div>
+                <div class="table-row"><span>gambar_referensi</span><span class="type">varchar(255)</span></div>
+                <div class="table-row"><span>status</span><span class="type">enum(pending, proses, selesai)</span></div>
+                <div class="table-row"><span>tanggal</span><span class="type">timestamp</span></div>
+            </div>
+        </div>
+
+        <div class="db-table-card">
+            <div class="table-header">
+                <span class="icon">🖼️</span>
+                <h3>Tabel: konten</h3>
+            </div>
+            <div class="table-body">
+                <div class="table-row"><span>id</span><span class="type">int(11)</span></div>
+                <div class="table-row"><span>posisi</span><span class="type">varchar(50)</span></div>
+                <div class="table-row"><span>judul</span><span class="type">varchar(255)</span></div>
+                <div class="table-row"><span>deskripsi</span><span class="type">text</span></div>
+                <div class="table-row"><span>gambar</span><span class="type">varchar(255)</span></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="implementasi" class="iframe-container">
+    <div class="why-us-info">
+            <h2>Implementasi Website</h2>
+            <p>Tampilan Design Dan Fungsi Website</p>
+        </div>
+    
+    <div class="iframe-wrapper">
+        <iframe 
+            src="index.html" 
+            title="Database Schema Preview"
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+    <script>
+    const apayah = document.querySelector('.apayah');
+    const navLinks = document.querySelector('.nav-links');
+
+    apayah.addEventListener('click', () => {
+        // Menambah/menghapus class 'active' pada nav-links saat diklik
+        navLinks.classList.toggle('active');
+    });
+</script>
+</body>
+</html>
