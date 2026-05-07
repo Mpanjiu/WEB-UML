@@ -13,6 +13,32 @@ $id_user = $_SESSION['id_user'];
 $nama    = $_SESSION['nama'];
 $role    = $_SESSION['role'];
 
+// --- LOGIKA HAPUS KARYA ---
+if (isset($_GET['hapus_karya'])) {
+    $id_karya = mysqli_real_escape_string($conn, $_GET['hapus_karya']);
+    
+    // Ambil nama file gambar terlebih dahulu untuk dihapus dari folder
+    $query_cek_gambar = mysqli_query($conn, "SELECT foto_karya FROM seniman WHERE id = '$id_karya' AND id_user = '$id_user'");
+    if (mysqli_num_rows($query_cek_gambar) > 0) {
+        $data_gambar = mysqli_fetch_assoc($query_cek_gambar);
+        $path_gambar = 'uploads/' . $data_gambar['foto_karya'];
+        
+        // Hapus file fisik jika ada
+        if (file_exists($path_gambar)) {
+            unlink($path_gambar);
+        }
+        
+        // Hapus data dari database
+        $delete_query = "DELETE FROM seniman WHERE id = '$id_karya' AND id_user = '$id_user'";
+        if (mysqli_query($conn, $delete_query)) {
+            echo "<script>alert('Karya berhasil dihapus!'); window.location='profile.php';</script>";
+        } else {
+            echo "<script>alert('Gagal menghapus karya!');</script>";
+        }
+    }
+}
+// --------------------------
+
 // 1. Ambil Data User Terbaru (termasuk foto_profil)
 // Ambil daftar karya yang sudah diposting oleh user ini (jika dia seniman)
 $query_karya = mysqli_query($conn, "SELECT * FROM seniman WHERE id_user = '$id_user' ORDER BY id DESC");
@@ -97,7 +123,7 @@ if (isset($_POST['upload_karya'])) {
                 <li><a href="index.php">Home</a></li>
                 <li><a href="product.php">Product</a></li>
                 <li><a href="album.php">Album</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="about.php">About</a></li>
                 <li><a href="artist.php">Artist</a></li>
                 <li><a href="<?= $sudah_login ? 'profile.php' : 'login.php'; ?>">Profile</a>
             <?php if($sudah_login): ?></li>
@@ -135,17 +161,17 @@ if (isset($_POST['upload_karya'])) {
             <div class="detail-item">
                 <span class="detail-label">Email</span>
                 <span class="detail-value"><?= htmlspecialchars($email); ?></span>
-                <a href="#" class="edit-link">Edit</a>
+                <!-- <a href="#" class="edit-link">Edit</a> -->
             </div>
             <div class="detail-item">
                 <span class="detail-label">Subscription Type</span>
-                <span class="detail-value"><?= ($role == 1) ? 'Artist Pro' : 'Basic User'; ?> <a href="#" style="color:var(--primary-blue); font-size:12px; margin-left:10px;">Upgrade</a></span>
-                <a href="#" class="edit-link">Edit</a>
+                <span class="detail-value"><?= ($role == 1) ? 'Artist Pro' : 'Basic User'; ?> <a href="#" style="color:var(--primary-blue); font-size:12px; margin-left:10px;"></a></span>
+                <!-- <a href="#" class="edit-link">Edit</a> -->
             </div>
             <div class="detail-item">
                 <span class="detail-label">Password</span>
                 <span class="detail-value">********</span>
-                <a href="#" class="edit-link">Edit</a>
+                <!-- <a href="#" class="edit-link">Edit</a> -->
             </div>
         </div>
 
@@ -187,6 +213,12 @@ if (isset($_POST['upload_karya'])) {
                         <div class="gallery-content">
                             <span class="tag"><?= htmlspecialchars($karya['artstyle']); ?></span>
                             <p><?= htmlspecialchars($karya['deskripsi']); ?></p>
+                            
+                            <a href="profile.php?hapus_karya=<?= $karya['id']; ?>" 
+                               onclick="return confirm('Apakah Anda yakin ingin menghapus karya ini?');" 
+                               style="display: inline-block; margin-top: 10px; color: #ff4d4d; font-size: 12px; text-decoration: none; font-weight: bold;">
+                               Delete Artwork
+                            </a>
                         </div>
                     </div>
                 <?php 

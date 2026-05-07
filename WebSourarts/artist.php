@@ -37,7 +37,7 @@ $query_artist = mysqli_query($conn, "SELECT u.fullname, u.foto_profil, s.artstyl
                 <li><a href="index.php">Home</a></li>
                 <li><a href="product.php">Product</a></li>
                 <li><a href="album.php">Album</a></li>
-                <li><a href="#about">About</a></li>
+               <li><a href="about.php">About</a></li>
                 <li><a href="artist.php">Artist</a></li>
                <li><a href="<?= $sudah_login ? 'profile.php' : 'login.php'; ?>">Profile</a>
             <?php if($sudah_login): ?></li>
