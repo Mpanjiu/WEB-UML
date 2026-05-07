@@ -47,7 +47,11 @@ body {
     font-size: 0.9rem;
 }
 
+<<<<<<< HEAD
 .apayah {
+=======
+.hamburger {
+>>>>>>> a99bb742f96f6bbb23cc7d01ba9eb03ea2677f6b
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
@@ -236,7 +240,11 @@ body {
 /* Responsive (Mobile Tweak) */
 @media (max-width: 768px) {
     .nav-links { display: none; }
+<<<<<<< HEAD
     .apayah { display: block; }
+=======
+    .hamburger { display: block; }
+>>>>>>> a99bb742f96f6bbb23cc7d01ba9eb03ea2677f6b
     
     .hero h1 { font-size: 2.5rem; }
     
