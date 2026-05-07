@@ -256,3 +256,534 @@
         font-size: 2.2rem;
     }
 }
+
+.stages-section {
+    padding: 100px 20px;
+    background-color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+.stages-header h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+    margin-bottom: 80px;
+    color: #1a1a1a;
+    text-align: center;
+}
+
+.stages-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 4 Kolom ke samping */
+    gap: 40px;
+}
+
+.stage-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stage-top {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    position: relative;
+}
+
+.stage-number {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #999;
+}
+
+.stage-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    flex-grow: 1;
+}
+
+.stage-time {
+    font-size: 0.75rem;
+    color: #999;
+    text-align: right;
+}
+
+.stage-line {
+    border: none;
+    border-top: 1px solid #e0e0e0; /* Garis tipis khas desain di gambar */
+    margin: 15px 0 20px 0;
+}
+
+.stage-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #666;
+    max-width: 90%;
+}
+
+/* Responsive: Menjadi 2 kolom di tablet dan 1 kolom di HP */
+@media (max-width: 1024px) {
+    .stages-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .stages-grid {
+        grid-template-columns: 1fr;
+    }
+    .stages-header h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+}
+
+    .bento-section {
+    padding: 80px 20px;
+    background-color: #fff;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Gambar lebih lebar sedikit dari grup statistik */
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* Gambar Utama */
+.bento-main-image {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.bento-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bento-main-image .badge {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    z-index: 10;
+}
+
+/* Grup Statistik */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    background-color: #f0f0f0;
+}
+
+.stat-card h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #1a1a1a;
+}
+
+.stat-card h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 40px; /* Memberi ruang sesuai gambar */
+    color: #333;
+}
+
+.stat-card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Responsif */
+@media (max-width: 1024px) {
+    .bento-grid {
+        grid-template-columns: 1fr; /* Tumpuk gambar dan stat di tablet */
+    }
+    
+    .bento-main-image {
+        height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .stats-grid {
+        grid-template-columns: 1fr; /* Stat tumpuk satu per satu di HP */
+    }
+    
+    .stat-card h3 {
+        font-size: 1.8rem;
+    }
+}
+
+.contact-section {
+    padding: 100px 20px;
+    background-color: #fdfaf5; 
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.contact-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: #2d1a1a;
+    margin-bottom: 80px;
+    font-weight: 400;
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    text-align: left;
+}
+
+.info-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #888;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.info-detail {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+.map-container {
+    width: 100%;
+    height: 500px;
+    /* Filter hitam putih untuk estetika minimalis */
+    filter: grayscale(100%) contrast(1.1);
+    border: 1px solid #eee;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (max-width: 992px) {
+    .contact-title h2 {
+        font-size: 3.5rem;
+    }
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+}
+
+.sidebar {
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid #eee;
+        }
+
+        .filter-label {
+            transform: rotate(-90deg);
+            font-size: 10px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #ccc;
+            text-transform: uppercase;
+        }
+
+        /* Section Utama Galeri */
+        .gallery-section {
+            flex-grow: 1;
+            padding: 50px;
+        }
+
+        .grid-container {
+            display: grid;
+            /* Membuat 4 kolom yang responsif */
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 40px 25px;
+            align-items: start;
+        }
+
+        /* Pembungkus per lukisan */
+        .art-card {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .art-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: grayscale(10%);
+            transition: all 0.3s ease;
+        }
+
+        .art-card img:hover {
+            filter: grayscale(0%);
+            transform: translateY(-5px);
+        }
+
+        /* Judul/Caption */
+        .art-title {
+            font-family: 'Georgia', serif;
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* Responsif untuk Tablet dan HP */
+        @media (max-width: 1024px) {
+            .grid-container { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .grid-container { grid-template-columns: 1fr; }
+            .sidebar { display: none; }
+        }
+
+        /* Pengaturan Dasar */
+.bagian-tim {
+  background-color: #ffffff;
+  padding: 80px 40px;
+  font-family: 'Inter', sans-serif; /* Pastikan font ini tersedia */
+}
+
+.kontainer-utama {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.header-tim {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 60px;
+  gap: 40px;
+}
+
+.sisi-kiri {
+  flex: 1;
+}
+
+.label-kecil {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.judul-utama {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 16px;
+  line-height: 1.2;
+}
+
+.sisi-kanan {
+  flex: 0 1 35%;
+}
+
+.deskripsi-tim {
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+/* Grid Layout */
+.grid-anggota {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 Kolom di desktop */
+  gap: 24px;
+}
+
+/* Kartu Staf */
+.kartu-staf {
+  width: 100%;
+}
+
+.bingkai-foto {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  aspect-ratio: 4 / 5;
+  background-color: #f3f4f6;
+}
+
+.foto-staf {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.kartu-staf:hover .foto-staf {
+  filter: grayscale(0%);
+}
+
+.info-staf {
+  margin-top: 24px;
+}
+
+.jabatan {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.nama-staf {
+  font-size: 24px;
+  font-family: serif; /* Bisa diganti font spesifik seperti 'Playfair Display' */
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+/* Tombol */
+.tombol-kontak {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tombol-kontak:hover {
+  background-color: #374151;
+}
+
+.titik-status {
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+/* Responsif (Mobile & Tablet) */
+@media (max-width: 1024px) {
+  .grid-anggota {
+    grid-template-columns: repeat(2, 1fr); /* 2 Kolom di tablet */
+  }
+  
+  .header-tim {
+    flex-direction: column;
+  }
+  
+  .sisi-kanan {
+    flex: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-anggota {
+    grid-template-columns: 1fr; /* 1 Kolom di HP */
+  }
+  
+  .judul-utama {
+    font-size: 32px;
+  }
+}
+
+/* Container Utama Info */
+.art-info {
+    padding: 24px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Style Tag (Kanan Atas/Floating) */
+.art-style-tag {
+    align-self: flex-start;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #4A90E2; /* Warna biru aksen */
+    background: rgba(74, 144, 226, 0.1);
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+/* Nama Seniman (Username) */
+.art-artist {
+    font-size: 13px;
+    font-weight: 500;
+    color: #888888; /* Warna teks muted seperti di gambar Rachel Derek */
+    display: flex;
+    align-items: center;
+}
+
+/* Judul Karya */
+.art-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-top: 4px;
+    line-height: 1.2;
+}
+
+/* Deskripsi Karya */
+.art-desc {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.6;
+    margin-top: 10px;
+    /* Memberikan efek potong teks jika terlalu panjang (optional) */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Garis Pemisah Tipis (Seperti di gambar referensi profil) */
+.art-info {
+    border-top: 1px solid #f0f0f0;
+}
